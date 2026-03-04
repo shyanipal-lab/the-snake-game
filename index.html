@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nokia Snake</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="main-container">
+
+    <!-- HEADER -->
+    <h1 class="title">NOKIA SNAKE</h1>
+    <hr class="divider">
+
+    <!-- LIFE & SCORE -->
+    <div class="status-bar">
+      <div class="lives">
+        ❤️ <span id="lifeCount">3</span>
+      </div>
+      <div class="score">
+        Score: <span id="score">0</span>
+      </div>
+    </div>
+
+    <!-- GAME CANVAS -->
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+    <!-- RETRY ICON -->
+    <div class="retry-container">
+      <button class="retry-btn" onclick="restartGame()">🔄</button>
+    </div>
+
+    <!-- CONTROLS GRID -->
+    <div class="controls-grid">
+      <button onclick="move('UP')" class="ctrl-btn">⬆️</button>
+      <div class="horizontal-buttons">
+        <button onclick="move('LEFT')" class="ctrl-btn">⬅️</button>
+        <button onclick="move('DOWN')" class="ctrl-btn">⬇️</button>
+        <button onclick="move('RIGHT')" class="ctrl-btn">➡️</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="game.js" defer></script>
+</body>
+</html>
